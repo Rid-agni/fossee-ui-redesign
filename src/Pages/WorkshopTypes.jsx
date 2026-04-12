@@ -69,25 +69,51 @@ const workshops = [
 ];
 
 function WorkshopTypes() {
-  const [openId, setOpenId] = useState(null); // ✅ FIXED
+  const [openId, setOpenId] = useState(null);
 
   return (
-    <div style={{ minHeight: "100vh", background: colors.background }}>
+    <div style={{
+      minHeight: "100vh",
+      background: "linear-gradient(135deg, #f8fafc, #f1f5f9, #fff7ed)"
+    }}>
       
       <Navbar colors={colors} />
 
       <div style={{
-  padding: "120px 16px 0",
-  maxWidth: "900px",
-  margin: "0 auto"
-}}>
-        <h1 style={{
-          textAlign: "center",
-          marginBottom: "30px",
-          color: colors.dark
+        padding: "140px 16px 0",
+        maxWidth: "900px",
+        margin: "0 auto"
+      }}>
+
+        {/* HERO WRAPPER */}
+        <div style={{
+          position: "relative",
+          marginBottom: "30px"
         }}>
-          Workshop Types
-        </h1>
+          <div style={{
+            position: "absolute",
+            top: "-40px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: "400px",
+            height: "150px",
+            background: "radial-gradient(circle, rgba(242,113,21,0.25), transparent 70%)",
+            filter: "blur(60px)",
+            zIndex: 0
+          }} />
+
+          <h1 style={{
+            position: "relative",
+            zIndex: 1,
+            textAlign: "center",
+            marginBottom: "30px",
+            color: colors.dark,
+            fontFamily: "'Boldonse', sans-serif",
+            letterSpacing: "0.5px"
+          }}>
+            Workshop Types
+          </h1>
+        </div>
 
         <table style={tableStyle}>
           <thead>
@@ -102,9 +128,16 @@ function WorkshopTypes() {
           <tbody>
             {workshops.map((w, index) => (
               <React.Fragment key={w.id}> 
-
-               
-                <tr>
+                <tr
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "translateY(-2px)";
+    e.currentTarget.style.boxShadow = "0 10px 25px rgba(0,0,0,0.08)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "translateY(0)";
+    e.currentTarget.style.boxShadow = "none";
+  }}
+>
                   <td style={tdStyle}>{index + 1}</td>
                   <td style={tdStyle}>{w.name}</td>
                   <td style={tdStyle}>{w.duration}</td>
@@ -121,43 +154,49 @@ function WorkshopTypes() {
                 </tr>
 
                 {openId === w.id && (
-  <tr>
-    <td colSpan="4" style={{ padding: "20px", background: "transparent" }}>
-      <div style={expandBox}>
+                  <tr
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "translateY(-2px)";
+    e.currentTarget.style.boxShadow = "0 10px 25px rgba(0,0,0,0.08)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "translateY(0)";
+    e.currentTarget.style.boxShadow = "none";
+  }}
+>
+                    <td colSpan="4" style={{ padding: "20px", background: "transparent" }}>
+                      <div style={expandBox}>
 
-  <div style={{
-    position: "absolute",
-    inset: 0,
-    borderRadius: "14px",
-    background:
-      "radial-gradient(circle at top left, rgba(242,113,21,0.15), transparent 60%)",
-    zIndex: 0,
-    pointerEvents: "none"
-  }} />
+                        <div style={{
+                          position: "absolute",
+                          inset: 0,
+                          borderRadius: "14px",
+                          background:
+                            "radial-gradient(circle at top left, rgba(242,113,21,0.15), transparent 60%)",
+                          zIndex: 0,
+                          pointerEvents: "none"
+                        }} />
 
-  <div style={{ position: "relative", zIndex: 1 }}>
+                        <div style={{ position: "relative", zIndex: 1 }}>
 
-    <h3 style={sectionTitle}>Description</h3>
-    <div
-      style={sectionContent}
-      dangerouslySetInnerHTML={{ __html: w.description }}
-    />
+                          <h3 style={sectionTitle}>Description</h3>
+                          <div
+                            style={sectionContent}
+                            dangerouslySetInnerHTML={{ __html: w.description }}
+                          />
 
-    
+                          <h3 style={sectionTitle}>Terms & Conditions</h3>
+                          <div
+                            style={sectionContent}
+                            dangerouslySetInnerHTML={{ __html: w.terms }}
+                          />
 
-    <h3 style={sectionTitle}>Terms & Conditions</h3>
-    <div
-      style={sectionContent}
-      dangerouslySetInnerHTML={{ __html: w.terms }}
-    />
+                        </div>
 
-  </div>
-
-</div>
-    </td>
-  </tr>
-)}
-
+                      </div>
+                    </td>
+                  </tr>
+                )}
               </React.Fragment>
             ))}
           </tbody>
@@ -183,23 +222,30 @@ export default WorkshopTypes;
 
 const tableStyle = {
   width: "100%",
-  borderCollapse: "collapse",
-  background: "white",
-  borderRadius: "12px",
-  overflow: "hidden",
-  boxShadow: "0 10px 25px rgba(0,0,0,0.08)"
+  borderCollapse: "separate",
+  borderSpacing: "0 12px",
+
+  background: "linear-gradient(135deg, #ffffff, #f8fafc)",
+  borderRadius: "16px",
+  padding: "10px",
+
+  border: "1px solid rgba(0,0,0,0.08)", 
+  boxShadow: "0 20px 40px rgba(0,0,0,0.12)" 
 };
 
 const thStyle = {
   textAlign: "left",
-  padding: "15px",
-  borderBottom: "1px solid #e5e7eb",
-  color: "#374151"
+  padding: "12px 15px",
+  color: "#6b7280",
+  fontSize: "13px",
+  fontWeight: "600"
 };
 
 const tdStyle = {
-  padding: "15px",
-  borderBottom: "1px solid #e5e7eb",
+  padding: "16px",
+  background: "linear-gradient(135deg, #ffffff, #fff7ed)", 
+  borderTop: "1px solid #f3f4f6",
+  borderBottom: "1px solid #f3f4f6",
   color: "#111827"
 };
 
@@ -223,21 +269,12 @@ const expandBox = {
   overflow: "hidden"
 };
 
-const accentBar = {
-  position: "absolute",
-  left: 0,
-  top: 0,
-  height: "100%",
-  width: "5px",
-  background: "#070b12",
-  borderRadius: "14px 0 0 14px"
-};
-
 const sectionTitle = {
   fontSize: "16px",
   fontWeight: "600",
   marginBottom: "8px",
-  color: "#111827"
+  color: "#111827",
+  fontFamily: "'Inter', sans-serif"
 };
 
 const sectionContent = {
@@ -245,4 +282,3 @@ const sectionContent = {
   color: "#374151",
   lineHeight: "1.7"
 };
-

@@ -3,61 +3,80 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const colors = {
   background: "linear-gradient(to bottom, #f9fafb, #f3f4f6)",
-  dark: "#070b12",
-  lightText1: "#6b7280",
-  lightText2:"#caba9d",
-  primary: "#f27115",
+  dark: "#070b12ff",
+  lightText: "#caba9d",
+  primary: "rgb(188, 84, 10)",
   primaryHover: "rgb(188, 84, 10)"
 };
 
-  const navLink = {
-  color: colors.dark,
+const navLink = {
+  color: "#ffffff",
   textDecoration: "none",
   fontWeight: "500",
-  transition: "color 0.2s ease"
+  transition: "color 0.2s ease",
+  fontFamily: "'Inter', sans-serif"
 };
 
 const mobileLink = {
-  color: colors.dark,
+  color: "#ffffff",
   textDecoration: "none",
-  fontWeight: "500"}
+  fontWeight: "500",
+  fontFamily: "'Inter', sans-serif"
+};
   return (
     <>
      <nav style={{
-          padding: "15px 40px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
+  position: "fixed",
+  top: "20px",
+  left: "50%",
+  transform: "translateX(-50%)",
 
-          position: "fixed",
-          top: 0,
-          width: "100%",
-          zIndex: 100,
+  width: "90%",
+  maxWidth: "1100px",
 
-          background: "transparent",
-          backdropFilter: "none"
-        }}>
+  padding: "14px 30px",
 
-          <h2 style={{ color: colors.dark }}>FOSSEE Workshops</h2>
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+
+  background: "rgba(7, 11, 18, 0.85)",
+  backdropFilter: "blur(10px)",
+
+  borderRadius: "14px",
+  border: "1px solid rgba(255,255,255,0.08)",
+
+  boxShadow: "0 10px 30px rgba(0,0,0,0.25)",
+
+  zIndex: 100
+}}>
+
+          <h2 style={{
+  color: "#ffffff",
+  fontFamily: "'Boldonse', sans-serif",
+  letterSpacing: "0.5px"
+}}>
+  FOSSEE Workshops
+</h2>
 
           {/* desktop menu */}
           <div className="desktop-menu" style={{ display: "flex", gap: "25px" }}>
             <a href="#"
               style={navLink}
-              onMouseEnter={(e) => e.currentTarget.style.color = "#ffffff"}
-              onMouseLeave={(e) => e.currentTarget.style.color = colors.dark}>Home</a>
+            onMouseEnter={(e) => e.currentTarget.style.color = "#caba9d"}
+onMouseLeave={(e) => e.currentTarget.style.color = "#ffffff"}>Home</a>
             <a href="#"
               style={navLink}
-              onMouseEnter={(e) => e.currentTarget.style.color = "#ffffff"}
-              onMouseLeave={(e) => e.currentTarget.style.color = colors.dark}>Workshops</a>
+              onMouseEnter={(e) => e.currentTarget.style.color = "#caba9d"}
+onMouseLeave={(e) => e.currentTarget.style.color = "#ffffff"}>Workshops</a>
             <a href="#"
               style={navLink}
-              onMouseEnter={(e) => e.currentTarget.style.color = "#ffffff"}
-              onMouseLeave={(e) => e.currentTarget.style.color = colors.dark}>Statistics</a>
+              onMouseEnter={(e) => e.currentTarget.style.color = "#caba9d"}
+onMouseLeave={(e) => e.currentTarget.style.color = "#ffffff"}>Statistics</a>
             <a href="#"
               style={navLink}
-              onMouseEnter={(e) => e.currentTarget.style.color = "#ffffff"}
-              onMouseLeave={(e) => e.currentTarget.style.color = colors.dark}>Login</a>
+             onMouseEnter={(e) => e.currentTarget.style.color = "#caba9d"}
+onMouseLeave={(e) => e.currentTarget.style.color = "#ffffff"}>Login</a>
           </div>
 
           {/* phone menu */}
@@ -69,38 +88,21 @@ const mobileLink = {
               fontSize: "22px",
               background: "none",
               border: "none",
-              color: colors.dark,
+              color: "#ffffff",
               cursor: "pointer"
             }}
           >
             ☰
           </button>
         </nav>
-        <div style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "80px",
-
-          backdropFilter: "blur(12px)",
-          WebkitBackdropFilter: "blur(12px)",
-
-          background: "rgba(255,255,255,0.05)",
-
-          maskImage: "linear-gradient(to bottom, black 60%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 100%)",
-
-          pointerEvents: "none",
-          zIndex: 50
-        }} />
+        
         {menuOpen && (
           <div style={{
             position: "fixed",
             top: "70px",
             right: "20px",
 
-            background: "rgba(255, 255, 255, 0.2)",
+            background: "rgba(7, 11, 18, 0.85)",
             backdropFilter: "blur(10px)",
             WebkitBackdropFilter: "blur(10px)",
 

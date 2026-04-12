@@ -15,7 +15,7 @@ function Register() {
 
             <div
                 style={{
-                    paddingTop: "120px",
+                    paddingTop: "150px",
                     display: "flex",
                     justifyContent: "center"
                 }}
@@ -50,7 +50,9 @@ function Register() {
                         style={{
                             textAlign: "center",
                             marginBottom: "10px",
-                            color: colors.dark
+                            color: colors.dark,
+                            fontFamily: "'Boldonse', sans-serif",
+    letterSpacing: "0.5px"
                         }}
                     >
                         Coordinator Registration

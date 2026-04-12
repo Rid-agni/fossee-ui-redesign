@@ -34,7 +34,8 @@ function App() {
           backdropFilter: "none"
         }}>
 
-          <h2 style={{ color: colors.dark }}>FOSSEE Workshops</h2>
+          <h2 style={{ color: colors.dark, fontFamily: "'Boldonse', sans-serif",
+    letterSpacing: "0.5px" }}>FOSSEE Workshops</h2>
 
           {/* desktop menu */}
           <div className="desktop-menu" style={{ display: "flex", gap: "25px" }}>
@@ -151,7 +152,9 @@ function App() {
             <h1 style={{
               fontSize: "48px",
               marginBottom: "20px",
-              color: "white"
+              color: "white",
+              fontFamily: "'Boldonse', sans-serif",
+    letterSpacing: "0.5px"
             }}>
               Learn. Build. Grow.
             </h1>

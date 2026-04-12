@@ -23,7 +23,7 @@ function Login() {
       {/*login */}
       <div
         style={{
-          paddingTop: "120px",
+          paddingTop: "150px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center"
@@ -64,7 +64,9 @@ padding: "45px 40px",
         color: colors.dark,
         textAlign: "center",
         fontSize: "24px",
-        fontWeight: "600"
+    fontWeight: "600",
+    fontFamily: "'Boldonse', sans-serif",
+    letterSpacing: "0.5px"
             }}
           >
             Sign In

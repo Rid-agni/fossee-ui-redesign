@@ -23,7 +23,7 @@ function ForgotPassword() {
       {/* main */}
       <div
         style={{
-          paddingTop: "120px",
+          paddingTop: "150px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center"
@@ -57,16 +57,18 @@ function ForgotPassword() {
             }}
           />
           <h2
-            style={{
-              marginBottom: "15px",
-              color: colors.dark,
-              textAlign: "center",
-              fontSize: "24px",
-              fontWeight: "600"
-            }}
-          >
-            Reset Password
-          </h2>
+  style={{
+    marginBottom: "15px",
+    color: colors.dark,
+    textAlign: "center",
+    fontSize: "24px",
+    fontWeight: "600",
+    fontFamily: "'Boldonse', sans-serif",
+    letterSpacing: "0.5px"
+  }}
+>
+  Reset Password
+</h2>
           <p
             style={{
               fontSize: "14px",
