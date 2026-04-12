@@ -21,7 +21,6 @@ const testimonials = [
 export default function testimonialslide() {
     const [index, setIndex] = useState(0);
 
-    // auto slide
     useEffect(() => {
         const interval = setInterval(() => {
             setIndex((prev) => (prev + 1) % testimonials.length);
