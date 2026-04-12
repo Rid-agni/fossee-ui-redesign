@@ -7,3 +7,12 @@
 body {
   font-family: Arial, sans-serif;
 }
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none !important;
+  }
+
+  .menu-btn {
+    display: block !important;
+  }
+}
