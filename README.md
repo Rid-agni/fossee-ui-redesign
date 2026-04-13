@@ -109,6 +109,9 @@ One of the main challenges was balancing how the UI looks with how easy it is to
 ### Workshop Statistics Page after
 ![Stats](./screenshots/WorkshopStats.png)
 
+### Demo Video:
+
+https://github.com/user-attachments/assets/6a183ce3-e5b7-4136-8c86-e466cbc39fa0
 
 
 ## Setup
