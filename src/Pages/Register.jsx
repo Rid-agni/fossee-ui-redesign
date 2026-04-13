@@ -8,10 +8,10 @@ const colors = {
     primaryHover: "rgb(188, 84, 10)"
 };
 
-function Register() {
+function Register({ user, setUser, setPage }) {
     return (
         <div style={{ minHeight: "100vh", background: colors.background }}>
-            <Navbar colors={colors} />
+            <Navbar user={user} setUser={setUser} setPage={setPage} />
 
             <div
                 style={{
@@ -52,7 +52,7 @@ function Register() {
                             marginBottom: "10px",
                             color: colors.dark,
                             fontFamily: "'Boldonse', sans-serif",
-    letterSpacing: "0.5px"
+                            letterSpacing: "0.5px"
                         }}
                     >
                         Coordinator Registration
