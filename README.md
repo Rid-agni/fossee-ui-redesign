@@ -83,6 +83,34 @@ One of the main challenges was balancing how the UI looks with how easy it is to
 
 ## Screenshots and Demo Video
 
+### A few comparisons of old and new UI:
+
+### Homepage before
+![Homepage](./screenshots/OGHomePg1.png)
+![Homepage](./screenshots/OGHomePg2.png)
+![Homepage](./screenshots/OGHomePg3.png)
+### Homepage after
+![Homepage](./screenshots/Homepage1.png)
+![Homepage](./screenshots/Homepage2.png)
+![Homepage](./screenshots/Homepage3.png)
+
+### Login Page before
+![Login](./screenshots/Login%20OG.png)
+### Login Page after
+![Login](./screenshots/Login%20Page.png)
+
+### Forgot Password Page before
+![ForgotPass](./screenshots/ForgotPassOG.png)
+### Forgot Password Page after
+![ForgotPass](./screenshots/ForgotPass.png)
+
+### Workshop Statistics Page before
+![Stats](./screenshots/StatsOG.png)
+### Workshop Statistics Page after
+![Stats](./screenshots/WorkshopStats.png)
+
+
+
 ## Setup
 ### Requirements
    - Node.js (v16 or higher)
